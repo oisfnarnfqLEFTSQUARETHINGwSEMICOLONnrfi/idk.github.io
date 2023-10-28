@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Play MP3 on Button Click</title>
+</head>
+<body>
+    <button id="playButton" style="width: 200px; height: 100px; background-color: red; font-size: 24px; color: white;">Explosion</button>
+
+    <audio id="audio" src="boom-2.mp3"></audio>
+
+    <script>
+        // Get references to the button and audio element
+        const playButton = document.getElementById('playButton');
+        const audio = document.getElementById('audio');
+
+        // Add a click event listener to the button
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play(); // Play the audio
+            } else if (audio.play) {
+                audio.currentTime = 0
+            }
+        });
+    </script>
+</body>
+</html>
